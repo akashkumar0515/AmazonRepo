@@ -3,17 +3,20 @@ package Framework.E2EAmazon;
 import java.io.IOException;
 import java.util.ArrayList;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
+import jdk.internal.org.jline.utils.Log;
 import resources.Baseclass;
 import resources.Propertiesdriven;
 
 
 public class AddproductAmz extends Baseclass
 {
-	
+	public static Logger log=LogManager.getLogger(AddaddressAmz.class.getName());
 
 	@BeforeClass
 	public void Initilaizedriver() throws IOException
@@ -21,6 +24,7 @@ public class AddproductAmz extends Baseclass
 		driver=Initilization();
 		driver.get(Url);
 		driver.manage().window().maximize();
+		log.info("Driver open and Maximize sucessfully");
 	}
 	
 	@Test(priority = 1)
@@ -28,6 +32,7 @@ public class AddproductAmz extends Baseclass
 	{
 		AmzHomepage hm=new AmzHomepage(driver);
 		hm.getsignin().click();
+		log.info("Sigin page open sucessfully");
 	}
 	
 	@Test(priority = 2)
@@ -40,6 +45,7 @@ public class AddproductAmz extends Baseclass
 		sng.getcntnbtn().click();
 		sng.getpswd().sendKeys(password);
 		sng.getsignbtn().click();
+		log.info("Logged in sucssfully");
 		
 	}
 	
