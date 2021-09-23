@@ -22,9 +22,10 @@ public class AddproductAmz extends Baseclass
 	public void Initilaizedriver() throws IOException
 	{
 		driver=Initilization();
+		log.info("Driver initilization");
 		driver.get(Url);
 		driver.manage().window().maximize();
-		log.info("Driver open and Maximize sucessfully");
+		log.info("Browser Maximize sucessfully");
 	}
 	
 	@Test(priority = 1)
@@ -42,8 +43,10 @@ public class AddproductAmz extends Baseclass
 		String password=Propertiesdriven.getdriverprop("Username");
 		AmzSigninpage sng=new AmzSigninpage(driver);
 		sng.GetEmail().sendKeys(username);
+		log.info("Username entered sucessfully");
 		sng.getcntnbtn().click();
 		sng.getpswd().sendKeys(password);
+		log.info("password entered sucessfully");
 		sng.getsignbtn().click();
 		log.info("Logged in sucssfully");
 		
