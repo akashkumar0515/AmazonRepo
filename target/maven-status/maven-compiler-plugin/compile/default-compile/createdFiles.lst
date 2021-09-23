@@ -1,0 +1,8 @@
+resources\ExtentReportAmz.class
+resources\Baseclass.class
+Framework\E2EAmazon\AmzSigninpage.class
+Framework\E2EAmazon\AmzAccountpage.class
+resources\Propertiesdriven.class
+Framework\E2EAmazon\AmzaddAddresspage.class
+resources\DatadrivenExcel.class
+Framework\E2EAmazon\AmzHomepage.class

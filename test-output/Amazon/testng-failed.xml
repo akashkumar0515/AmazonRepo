@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Amazon]" guice-stage="DEVELOPMENT">
+  <listeners>
+    <listener class-name="Framework.E2EAmazon.Listners"/>
+  </listeners>
+  <test thread-count="5" name="AmazonE2E(failed)">
+    <classes>
+      <class name="Framework.E2EAmazon.AddaddressAmz">
+        <methods>
+          <include name="closebswr"/>
+          <include name="Addadress"/>
+          <include name="Initilaizedriver"/>
+        </methods>
+      </class> <!-- Framework.E2EAmazon.AddaddressAmz -->
+    </classes>
+  </test> <!-- AmazonE2E(failed) -->
+</suite> <!-- Failed suite [Amazon] -->
