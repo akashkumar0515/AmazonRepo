@@ -56,5 +56,6 @@ public class AddproductAmz extends Baseclass
 	public void closebswr()
 	{
 		driver.close();
+		log.info("driver close sucessfully");
 	}
 }
